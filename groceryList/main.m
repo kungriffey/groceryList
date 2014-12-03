@@ -10,8 +10,13 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+
+        NSMutableArray *groceryList = [NSMutableArray arrayWithObjects:@"Milk", @"Eggs", @"Bacon",
+                                       @"Whey Protein", @"Oatmeal", @"Peanut Butter", nil];
+        NSLog(@"There are %lu items in the list:", (unsigned long)groceryList.count);
+        for (NSMutableArray *loop in groceryList) {
+            NSLog(@"%@", loop);
+        }
     }
     return 0;
 }
